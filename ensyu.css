@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  width: 960px;
+  margin: 50px auto;
+  /*上との隙間は50だけどmargin-topにすると中央揃えにならないのでauto使う*/
+  /*↑訂正、箱とリスト全体の上下を50空けてautoで中央揃えしてるっぽい*/
+}
+
+.item-list{
+  margin-bottom: 50px;
+  /*下の箱との隙間*/
+}
+
+.list{
+padding: 20px;
+list-style: none;
+}
+
+.list:nth-child(odd) {
+  background-color: #eee;
+}
+
+.box-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  background-color: #ffd700;
+  width: 30%;
+  height: 200px;
+  margin-right: 5%;
+  margin-bottom: 40px;
+}
+
+.box:first-child,
+.box:nth-child(5),
+.box:last-child {
+  background-color: #ff8c00;
+}
+
+/* 
+:nth-last-child(n)の意味
+兄弟要素の中で、後ろから数えて3 つおきに要素を選択
+　＝:nth-last-child(4n)
+*/
+
